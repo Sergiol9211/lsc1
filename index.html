@@ -10,18 +10,40 @@
 
 <body>
 
-    <h1>Buscador de Videos en Lengua de Señas</h1>
+    <h1>Buscador de Videos en Lengua de Señas (LSC)</h1>
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Escribe la palabra exacta...">
         <button onclick="buscarVideo()">Buscar</button>
+        
     </div>
 
     <div id="videoContainer" class="video-container">
         <p>Escribe una palabra para ver el video.</p>
     </div>
 
+    <h3>Si no encuentras una palabra específica puedes solicitarla por WhatsApp</h3>
+    <button class="btn-secundario" onclick="enviarWhatsapp()">Enviar WhatsApp</button>
+
+    <footer>
+        <p>&copy; 2025 - Proyecto Buscador LSC | Creado por
+            <a href="https://www.instagram.com/contalib1.0/?igsh=b3UwbTNmZ3U3MTAy#" target="_blank">Contalib1.0</a> |
+            Todos los derechos reservados.
+        </p>
+        <p>Contacto: liberato11@hotmail.com</p>
+        <p>WhatsApp: +57 3185878056</p>
+        <p>Garzón, Huila, Colombia</p>
+    </footer>
+
     <script src="script.js"></script>
+
+    <script>
+        function enviarWhatsapp() {
+            const palabra = document.getElementById('searchInput').value;
+            const url = `https://api.whatsapp.com/send?phone=573185878056&text=Hola,%20me%20gustaría%20que%20agregaran%20el%20video%20de%20la%20palabra:%20${encodeURIComponent(palabra)}`;
+            window.open(url, '_blank');
+        }
+    </script>
 
 </body>
 
