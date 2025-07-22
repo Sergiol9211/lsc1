@@ -1,6 +1,6 @@
 const videos = {
     "profesor": "https://www.youtube.com/embed/ihg4NtClw0M",
-    "carro": "https://www.youtube.com/embed/UidlWZ2e3Z0"
+    "carro": "https://www.youtube.com/embed/UidlWZ2e3Z0",
     "computador": "https://www.youtube.com/embed/xG5P1iL7J_I",
 };
 
@@ -31,4 +31,3 @@ document.getElementById('searchInput').addEventListener('keyup', function (event
         buscarVideo();
     }
 });
-
